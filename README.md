@@ -1,9 +1,5 @@
 # Argo
-에이블스쿨 4기 12조 빅프로젝트 
-
-
-작업 참고용 노션
-https://www.notion.so/aivle4-12/56c6dc8b7c2e4c95926be643bcb3fc76?v=49325af3c6264749bedfd651543cc494
+신입사원 역량 개발을 위한 웹 사이트
 
 ## 버전
 python = 3.10
@@ -11,33 +7,19 @@ node = 20.9.0
 npm = 10.1.0 
 yarn = 1.22.21 
 
-
-## Install Dependencies
-백엔드 환경
-conda create -n {env_name} python=3.10
-pip install -r requirements.txt
-//surprise install 오류 발생시 실행하세요
-conda install -c conda-forge scikit-surprise
-
-프론트엔드 환경  
-// node, npm 버전 확인하기  
-node --version
-npm --version
-// yarn 설치  
-npm install -g yarn  
-// frontend 이동  
-yarn install
-
-## db 생성
-cd backend
-python manage.py makemigrations
-python manage.py migrate
-
-## BE 실행 (Gunicorn)
-conda activate {env_name}
-python manage.py runserver // 윈도우
-python gunicorn_start.py // 리눅스
-
-## FE 실행 (React)
-cd ../frontend  
-yarn start
+## 주요 기능 및 기술
+1. 사용자 관리
+  - 회원가입 로그인
+  - 유효성 검사
+  - 서비스 이용 회원 확인
+  - 이메일 본인 인증
+  - 비밀번호 변경
+  - 탈퇴
+2. FAQ 챗봇
+  - GPT API와 내규 문서 벡터 DB로 회사 내규 관련 다양한 질문 답변
+3. 역량 강화
+  - 5가지 역량에 대한 문제 풀기
+  - 4가지 역량: 랜덤으로 출제되는 문제 풀고, 오답 확인 -> 일정 문제수가 넘으면 약점부분 출제
+  - 커뮤니케이션 역량: GPT API로 자연스러운 대화 생성, 문장 분류로 비즈니스대화 원칙 충족 확인
+4. 학습 평가
+  - 협업 필터링으로 사용자 맞춤 문제 추천, 사용자 맞춤 피드백제공
